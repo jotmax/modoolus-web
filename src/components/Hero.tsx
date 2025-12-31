@@ -3,78 +3,79 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="bg-[#F6F2E8] border-b-4 border-black">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 py-16 md:grid-cols-2 md:py-20">
-        <div className="flex flex-col justify-center">
-          <h1 className="text-5xl font-extrabold leading-tight text-black md:text-6xl lg:text-7xl">
-            Where Africa's <br />
-            <span className="bg-[#1E4ED8] px-3 py-1 text-white inline-block">
-              Next Tech Talent
-            </span>{" "}
+    <section className="relative min-h-[600px] overflow-hidden bg-gradient-to-br from-[#0a2540] via-[#1a4d6d] to-[#2a5f7f] md:min-h-[700px]">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 py-16 md:grid-cols-2 md:py-24 lg:py-32">
+        {/* Left Content */}
+        <div className="relative z-10 flex flex-col justify-center">
+          <h1 className="text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl">
+            Learn. Lead.
             <br />
-            Begins
+            Transform.
           </h1>
 
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-black md:text-lg">
-            Level up with hands-on training, mentorship, and real opportunities.
-            Join Africa&apos;s fastest-growing tech community and transform your
-            future.
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/90 md:text-xl">
+            Build in-demand skills to unlock your potential and drive outcomes
+            for your career and business.
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-10 flex flex-wrap gap-4">
             <Link
               href="#get-started"
-              className="rounded-md bg-[#1E4ED8] px-6 py-3.5 text-base font-bold text-white hover:opacity-90 transition-opacity"
+              className="flex items-center gap-2 rounded-md bg-[#0066FF] px-8 py-4 text-base font-semibold text-white transition-all hover:bg-[#0052CC]"
             >
-              Get Started Now
+              <svg
+                className="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                />
+              </svg>
+              For Individuals
             </Link>
             <Link
               href="#cohort"
-              className="rounded-md border-2 border-[#1E4ED8] bg-white px-6 py-3.5 text-base font-bold text-[#1E4ED8] hover:bg-[#1E4ED8] hover:text-white transition-colors"
+              className="flex items-center gap-2 rounded-md border-2 border-white bg-transparent px-8 py-4 text-base font-semibold text-white transition-all hover:bg-white/10"
             >
-              Enroll For The Next Cohort
+              <svg
+                className="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+              For Businesses
             </Link>
           </div>
         </div>
 
-        <div className="flex items-center justify-center">
-          <div className="relative w-full max-w-lg">
-            {/* Main large image */}
-            <div className="relative z-10 border-4 border-[#1E4ED8] shadow-[8px_8px_0px_0px_rgba(30,78,216,1)]">
-              <Image
-                src="/images/hero.png"
-                alt="Modoolus community"
-                width={600}
-                height={450}
-                className="w-full h-auto object-cover"
-                priority
-              />
-            </div>
-
-            {/* Top left overlay image */}
-            <div className="absolute -top-4 -left-4 z-20 w-32 h-32 md:w-36 md:h-36 border-4 border-[#1E4ED8] bg-white shadow-[6px_6px_0px_0px_rgba(30,78,216,1)]">
-              <Image
-                src="/images/hero2.png"
-                alt="Student learning"
-                width={150}
-                height={150}
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            {/* Bottom right overlay image */}
-            <div className="absolute -bottom-4 -right-4 z-20 w-32 h-32 md:w-36 md:h-36 border-4 border-red-500 bg-white shadow-[6px_6px_0px_0px_rgba(239,68,68,1)]">
-              <Image
-                src="/images/hero3.png"
-                alt="Student success"
-                width={150}
-                height={150}
-                className="w-full h-full object-cover"
-              />
-            </div>
+        {/* Right Image */}
+        <div className="relative z-10 flex items-center justify-end">
+          <div className="relative h-[400px] w-full md:h-[500px] lg:h-[600px]">
+            <Image
+              src="/images/hero.png"
+              alt="Modoolus student learning"
+              fill
+              className="object-cover object-center"
+              priority
+            />
           </div>
         </div>
       </div>
+
+      {/* Gradient overlay for better text readability */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#0a2540]/80 to-transparent md:from-[#0a2540]/60"></div>
     </section>
   );
 }
