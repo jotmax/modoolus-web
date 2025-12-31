@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function WhyModoolus() {
   const items = [
     {
-      title: "Hands on Training",
+      title: "Hands-on Training",
       desc: "Build real projects from day one.",
     },
     {
@@ -17,35 +17,34 @@ export default function WhyModoolus() {
   ];
 
   return (
-    <section className="bg-white">
-      <div className="mx-auto max-w-6xl px-6 py-14">
+    <section className="bg-[#1E4ED8] border-b-4 border-black">
+      <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
         <div className="text-center">
-          <h2 className="text-2xl font-extrabold text-black md:text-3xl">
+          <h2 className="text-4xl font-extrabold text-white md:text-5xl">
             Why Modoolus
           </h2>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
           {items.map((item) => (
             <div
               key={item.title}
-              className="rounded-xl border border-black/10 bg-white p-6 text-center shadow-sm"
+              className="border-4 border-black bg-white p-8 text-center shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"
             >
-              <div className="mx-auto h-12 w-12 rounded-lg bg-black/10" />
-              <h3 className="mt-4 text-lg font-bold text-black">
+              <h3 className="text-2xl font-extrabold text-[#1E4ED8] md:text-3xl">
                 {item.title}
               </h3>
-              <p className="mt-2 text-sm leading-6 text-black/70">
+              <p className="mt-4 text-base leading-relaxed text-black md:text-lg">
                 {item.desc}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="mt-10 flex justify-center">
+        <div className="mt-12 flex justify-center">
           <Link
             href="#get-started"
-            className="rounded-md bg-[#1E4ED8] px-6 py-3 text-sm font-semibold text-white hover:opacity-90"
+            className="border-4 border-black bg-white px-8 py-4 text-base font-bold text-[#1E4ED8] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-shadow"
           >
             Get Started Now
           </Link>
