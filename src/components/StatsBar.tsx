@@ -1,18 +1,28 @@
+// StatsBar.tsx
 export default function StatsBar() {
+  const stats = [
+    { number: "4", label: "Tech Courses", icon: "📚" },
+    { number: "200+", label: "Active Learners", icon: "👥" },
+    { number: "3", label: "Mentorship Sessions", icon: "🎓" },
+  ];
+
   return (
-    <section className="bg-[#1B3FA6]">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-6 py-6 text-white md:grid-cols-3 md:gap-2">
-        <div className="text-center">
-          <div className="text-3xl font-extrabold">4</div>
-          <div className="mt-1 text-xs tracking-wide">Tech Courses</div>
-        </div>
-        <div className="text-center">
-          <div className="text-3xl font-extrabold">200+</div>
-          <div className="mt-1 text-xs tracking-wide">Active Learners</div>
-        </div>
-        <div className="text-center">
-          <div className="text-3xl font-extrabold">3</div>
-          <div className="mt-1 text-xs tracking-wide">Mentorship Sessions</div>
+    <section className="bg-gradient-to-r from-primary-600 to-secondary-600">
+      <div className="mx-auto max-w-6xl px-6 py-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 text-white">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center group">
+              <div className="text-4xl mb-2 transform group-hover:scale-110 transition-transform duration-200">
+                {stat.icon}
+              </div>
+              <div className="text-4xl md:text-5xl font-display font-extrabold mb-2">
+                {stat.number}
+              </div>
+              <div className="text-sm tracking-wide opacity-90">
+                {stat.label}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
