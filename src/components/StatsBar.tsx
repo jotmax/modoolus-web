@@ -1,9 +1,9 @@
 // StatsBar.tsx
 export default function StatsBar() {
   const stats = [
-    { number: "4", label: "Tech Courses", icon: "📚" },
-    { number: "200+", label: "Active Learners", icon: "👥" },
-    { number: "3", label: "Mentorship Sessions", icon: "🎓" },
+    { number: "", label: "Tech Courses", icon: "" },
+    { number: "", label: "Active Learners", icon: "" },
+    { number: "", label: "Mentorship Sessions", icon: "" },
   ];
 
   return (

@@ -36,7 +36,7 @@ export default function ValueProps() {
             Learn · Build · Belong
           </p>
           <h2 className="text-2xl md:text-3xl font-display font-extrabold text-gray-900 max-w-4xl mx-auto">
-            Modoolus is where ambitious African youth transform into world-class
+            At Modoolus, we transform ambitious African youths into world-class
             tech professionals through practical learning and real-world
             experience.
           </h2>
